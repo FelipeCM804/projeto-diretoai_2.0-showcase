@@ -1,0 +1,162 @@
+
+@layer base {
+  /* Theme-specific body backgrounds */
+  .dark body {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+  }
+
+  .light body {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
+  }
+
+  /* Header styles */
+  .app-header {
+    @apply transition-all duration-300;
+  }
+
+  .dark .app-header {
+    @apply bg-slate-900 border-b border-purple-500 backdrop-blur-xl;
+    background: linear-gradient(90deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.9) 100%);
+    border-color: rgba(168, 85, 247, 0.3);
+  }
+
+  .light .app-header {
+    @apply bg-white border-b border-slate-300 backdrop-blur-xl;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Title styles */
+  .app-title {
+    @apply transition-all duration-300;
+  }
+
+  .dark .app-title {
+    background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 50%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.3));
+  }
+
+  .light .app-title {
+    @apply text-slate-800 font-bold;
+    background: none;
+    -webkit-text-fill-color: initial;
+  }
+
+  /* Trigger button styles */
+  .app-trigger-button {
+    @apply transition-colors duration-300;
+  }
+
+  .dark .app-trigger-button {
+    @apply text-slate-300 hover:text-purple-300;
+  }
+
+  .light .app-trigger-button {
+    @apply text-slate-600 hover:text-slate-800;
+  }
+
+  /* Background styles */
+  .app-background {
+    @apply transition-all duration-300;
+  }
+
+  .dark .app-background {
+    @apply bg-gradient-to-br from-slate-900 via-purple-900 to-slate-800;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.5) 0%, rgba(88, 28, 135, 0.1) 50%, rgba(30, 41, 59, 0.5) 100%);
+  }
+
+  .light .app-background {
+    @apply bg-slate-50;
+  }
+
+  /* Neon text effect */
+  .neon-text {
+    @apply transition-all duration-300;
+  }
+
+  .dark .neon-text {
+    background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 50%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.3));
+  }
+
+  .light .neon-text {
+    @apply text-slate-700 font-bold;
+    background: none;
+    -webkit-text-fill-color: initial;
+  }
+
+  /* Sidebar styles */
+  .cyber-sidebar {
+    @apply transition-all duration-300;
+  }
+
+  .dark .cyber-sidebar {
+    @apply bg-slate-900 border-r border-purple-500 backdrop-blur-xl;
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.9) 100%);
+    border-color: rgba(168, 85, 247, 0.2);
+  }
+
+  .light .cyber-sidebar {
+    @apply bg-white border-r border-slate-300;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.05);
+  }
+
+  /* Nav item styles */
+  .cyber-nav-item {
+    @apply transition-all duration-300;
+  }
+
+  .dark .cyber-nav-item {
+    @apply text-slate-300 hover:text-purple-200 hover:bg-purple-500/20;
+  }
+
+  .dark .cyber-nav-item.active {
+    @apply text-purple-200 bg-purple-500/30 border-l-4 border-purple-400;
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.2);
+  }
+
+  .light .cyber-nav-item {
+    @apply text-slate-600 hover:text-slate-800 hover:bg-slate-100;
+  }
+
+  .light .cyber-nav-item.active {
+    @apply text-blue-600 bg-blue-50 border-l-4 border-blue-500;
+    box-shadow: 0 2px 4px rgba(59, 130, 246, 0.1);
+  }
+
+  /* Card styles */
+  .cyber-card {
+    @apply transition-all duration-300;
+  }
+
+  .dark .cyber-card {
+    @apply bg-slate-800/50 border border-purple-500/20 backdrop-blur-sm;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.1);
+  }
+
+  .light .cyber-card {
+    @apply bg-white border border-slate-200;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  /* Logo container styles for both themes */
+  .dark .glow-purple {
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+  }
+
+  .light .glow-purple {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+  }
+
+  /* Logo transition for theme changes */
+  .logo-transition {
+    @apply transition-opacity duration-300 ease-in-out;
+  }
+}
